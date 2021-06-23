@@ -1,0 +1,472 @@
+.web-counter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 0, 0.535);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: yellow;
+}
+.all-message {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 60vh;
+  scroll-behavior: smooth;
+}
+.top-container {
+  text-align: center;
+}
+.people {
+  background: pink;
+  padding: 30px;
+  margin: 0 60px;
+  color: cadetblue;
+  border-radius: 15px;
+}
+.auto {
+  background: orchid;
+  padding: 30px;
+  color: darkblue;
+  margin: 0 60px;
+  border-radius: 15px;
+}
+.btnVanMoi {
+  font-size: 80px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  border-bottom: 5px solid #999999;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.left {
+  width: 35%;
+  text-align: center;
+}
+
+.score {
+  width: 30%;
+  text-align: center;
+  font-size: 30px;
+  color: red;
+  margin-top: 12px;
+}
+
+.right {
+  width: 35%;
+  text-align: center;
+}
+
+.game-controls {
+  text-align: center;
+}
+
+.game-controls button {
+  width: auto;
+  height: auto;
+  font-size: 40px;
+  line-height: 40px;
+  padding: 30px 30px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  padding: 20px;
+  margin: 1px;
+  background-color: #ccc;
+  font-size: 20px;
+}
+
+.win {
+  background-color: #70e87b;
+}
+
+.lose {
+  background-color: #ed6464;
+}
+
+.system {
+  background-color: #ccc;
+}
+
+.disabled {
+  pointer-events: none;
+  color: #ccc;
+}
+
+.btnVanMoi:hover {
+  background: #70e87b;
+}
+.activePlayer {
+  border-bottom: 3px solid #14bdac;
+  background: #14bdac;
+}
+.players div {
+  width: 180px;
+  border-bottom: 3px solid transparent;
+  font-size: 24px;
+  margin: 0;
+  transition: all 0.25s;
+  border-radius: 8px;
+  padding: 10px 8px;
+}
+.players div i {
+  font-size: 20px;
+  font-weight: 100;
+}
+.players table {
+  margin: auto;
+}
+.play tr td {
+  height: 110px;
+  padding: 8px;
+  position: relative;
+  width: 125px;
+  text-align: center;
+}
+.play tr td i {
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  font-weight: 100;
+}
+.play {
+  padding: 20px 0px;
+  position: relative;
+}
+.play td {
+  border: 5px solid #0da192;
+}
+.play table {
+  width: 370px;
+  height: 300px;
+  margin: auto;
+}
+.play #replay {
+  color: #545454;
+  font-weight: bold;
+  font-size: 25px;
+  cursor: pointer;
+}
+.play-ground {
+  padding: 20px 0px;
+  border: 1px solid #dfe1e5;
+  border-radius: 8px;
+  animation: playground-animation 6.5s infinite alternate;
+  justify-content: center;
+}
+@keyframes playground-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0.8rem);
+  }
+}
+.play-ground p {
+  text-align: center;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+.play-ground #turn {
+  text-transform: uppercase;
+  color: #14bdac;
+  font-weight: bold;
+}
+.play-ground #replay {
+  background: transparent;
+  width: 200px;
+  border: 1px solid #14bdac;
+  font-size: 24px;
+  margin: 0;
+  transition: all 0.25s;
+  border-radius: 8px;
+  padding: 10px 8px;
+}
+.play-ground #replay:hover {
+  border: none;
+  background: #14bdac;
+  color: #fff;
+}
+.players img {
+  width: 20%;
+  float: right;
+}
+.result-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 10;
+  display: none;
+  animation: result-animation 3s infinite alternate;
+}
+@keyframes result-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-3rem);
+  }
+}
+.result-overlay > p {
+  font-size: 50px;
+  font-weight: 100;
+  text-align: center;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-weight: bold;
+}
+.result-overlay #txtWon {
+  margin-bottom: 15px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap");
+.hide {
+  display: none;
+}
+.border-rd {
+  border-radius: 5%;
+}
+.table td {
+  border-top: unset;
+}
+@media only screen and (max-width: 310px) {
+  .find-player {
+    width: 100px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jura", sans-serif;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+}
+.img-and-name-right {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.img-and-name-left {
+  display: flex;
+  flex-direction: row;
+}
+.toggles {
+  display: flex;
+  flex-direction: column;
+}
+.font-bigger {
+  color: deeppink !important;
+}
+.avatar-profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 20%;
+}
+.signInGG {
+  margin-top: 100px;
+}
+.break-word {
+  word-wrap: break-word;
+}
+tr td {
+  line-height: unset;
+}
+td img {
+  width: 50px;
+  height: 50px;
+}
+.btn {
+  margin: 1vw;
+}
+.avatar-player {
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.beChecked {
+  background-color: #2196f3;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.btn-warning {
+  color: white;
+}
+.table-light-mode {
+  background-color: aqua;
+  transition: background-color 1s;
+}
+.table-dark-mode {
+  background-color: gray !important;
+  color: white !important;
+  transition: all 1s;
+}
+.light-mode {
+  background-color: aqua;
+  transition: background-color 1s;
+}
+.dark-mode {
+  background-color: gray !important;
+  color: white !important;
+  transition: all 1s;
+}
+body {
+  height: 100%;
+}
+#app {
+  position: relative;
+  z-index: 0;
+}
+#app #finishGameGif {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+h3 {
+  font-size: 30px;
+  text-align: center;
+}
+.message-body {
+  width: 100%;
+  margin: auto;
+}
+.message-text-right {
+  margin-left: auto;
+  margin-right: 5px;
+  width: 60%;
+  border-radius: 10px;
+  border: greenyellow 3px solid;
+}
+.message-text-left {
+  width: 60%;
+  border-radius: 10px;
+  border: greenyellow 3px solid;
+}
+.mg-text {
+  font-weight: bolder;
+}
+.message-body input {
+  width: 100%;
+  border-radius: 2px;
+  border: 3px solid greenyellow;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.card {
+  width: 100%;
+  height: 75vh;
+  margin: auto;
+}
+.card-body {
+}
+.panel-title {
+  display: inline;
+}
+tr td:first-child {
+  font-weight: bold;
+  width: auto;
+}
+#scollDiv {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.flip-container {
+  perspective: 1000;
+  cursor: pointer;
+}
+.front,
+.back {
+  backface-visibility: hidden;
+  transition: 0.4s;
+  transform-style: preserve-3d;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.back {
+  transform: rotateY(-180deg);
+  position: absolute;
+}
+
+.flip-container.flipped .back {
+  transform: rotateY(0deg);
+}
+.flip-container.flipped .front {
+  transform: rotateY(180deg);
+}
+.matched {
+  opacity: 0.5;
+}
